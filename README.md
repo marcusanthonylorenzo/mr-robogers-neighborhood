@@ -1,34 +1,40 @@
-TESTS:
+# _Mr. Robogers Neighborhood_
 
-Describe: robotTalk(input)
+#### By _**Marcus Padilla**_
 
-<!-- *Store inputs AND output 
-[ "Beep" instead of 1,
-  "Boop" instead of 2,
-  "Won't you be my neighbor?" instead of 3]; -->
+#### _Whenever Mr. Robogers translates any integer which contains 1, 2, or 3; in robot speak they translate to "Beep", "Boop", and "Won't you be my neighbor?" respectively._
 
-<!-- Test: "It should take user input, run for loop and count each individual number up to specified number"
-Code: robotTalk(5);
-Expected Output: (console:) 0, 1, 2, 3, 4, 5 -->
+## Technologies Used
 
-<!-- Test: "It should return an array of numbers from 0 to the user's inputted number"
-Code: robotTalk(5);
-Expected Output: [0, 1, 2, 3, 4, 5] -->
+* Javascript
+* JQuery
+* HTML
+* CSS
+* Git
+* VSCode
+
+## Description
+
+_A practice using for loops and conditional statements to target specific numbers (1, 2, and 3) in multiple integers, to convert them to corresponding string values._
+
+## Setup/Installation Requirements
+
+* Download and install Git Bash (Windows), use the terminal in your text editor, or open Terminal(Mac).
+* Open Git Bash or Terminal and type:
+ **cd ~/desktop**
+* This will bring you to your desktop location on the command line, to receive files.
+* Next, type: **git clone https://github.com/marcusanthonylorenzo/mr-robogers-neighborhood**
+* Once completed, type **cd programming-language-suggester**
+* Open index.html in your browser.
+* Once your text editor is open, access "index.html" via live server or manually with your browser.
 
 
-<!-- Test: "It should convert array to string"
-Code: arrayFromIndexInput.join(", ");
-Expected Output: "0, 1, 2, 3, 4, 5" -->
+## Known Bugs
 
-<!-- Test: "It should check IF number is 1, 2, or 3, then replace with wordSubs[]"
-Code: robotTalk(5);
-Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5] -->
+* None at current time.
 
-<!-- Test: "It should replace 1-11 with wordSubs[i] "
-Code: robotTalk(5);
-Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5] -->
+## License
 
+[MIT](https://github.com/marcusanthonylorenzo/programming-language-suggester/blob/add-license-1/LICENSE)
 
-Test: "Determine for multiple digits if there is a 1, 2, or 3"
-Code: 
-Expected Output: "0", "Beep", "Boop", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Boop", "Won't you be my neighbor?", "Beep!"
+Copyright (c) 2022 _Marcus Padilla_
