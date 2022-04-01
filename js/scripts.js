@@ -22,42 +22,35 @@ function robotTalk(input){
     return arrayFromInput;
   }
 
-  // const checkOverTen = function(arrayIndexedInput){
-  //   let overTen;
-  //   for(let i = 0; i < arrayIndexedInput.length; i++){
-  //     console.log(arrayIndexedInput[i]);
-  //     const arrayId1 = arrayIndexedInput[i];
-  //     const arrayId2 = arrayId1.slice(i);
-  //     if (arrayId2.includes(1)){
-  //       console.log(i);
-  //       console.log(arrayId1);
-  //       console.log(arrayId2);
-  //     }
-  //   }
-  //   return overTen;
-  // }
-
   function replaceArr123(arrayIndexedInput) {
     for(let i = 0; i < arrayIndexedInput.length; i++){
       if (arrayIndexedInput[i] < 10){
-        let slicedArray = [];
-
-        if (arrayIndexedInput.includes(1)) {
-          console.log(slicedArray);
-          let newSlice = arrayIndexedInput.slice(0);
-          console.log(i);
-          console.log(newSlice);
-          let pushed = slicedArray.push(newSlice);
-          console.log(pushed);
-          // arrayIndexedInput.splice(arrayIndexedInput.indexOf(1), 1, wordSubs[0]);
-        } else if (arrayIndexedInput.includes(2)){
-          // arrayIndexedInput.splice(arrayIndexedInput.indexOf(2), 1, wordSubs[1]);
-        } else if (arrayIndexedInput.includes(3)){
-          // arrayIndexedInput.splice(arrayIndexedInput.indexOf(3), 1, wordSubs[2]);
-        }
-      } else if (arrayIndexedInput[i] >= 10) {
+        console.log(i);
         console.log(arrayIndexedInput);
-        console.log(slicedArray);
+        console.log(arrayIndexedInput[i]);
+        if (arrayIndexedInput.includes(1)) {
+          arrayIndexedInput.splice(arrayIndexedInput.indexOf(1), 1, wordSubs[0]);
+        } else if (arrayIndexedInput.includes(2)){
+          arrayIndexedInput.splice(arrayIndexedInput.indexOf(2), 1, wordSubs[1]);
+        } else if (arrayIndexedInput.includes(3)){
+          arrayIndexedInput.splice(arrayIndexedInput.indexOf(3), 1, wordSubs[2]);
+        } 
+      } else if (arrayIndexedInput[i] >= 10) {
+        let copiedArray = arrayIndexedInput.slice();
+        console.log(copiedArray);
+        let arrayToStr = copiedArray.join(" ");
+        console.log(arrayToStr);
+
+        if (arrayToStr.includes(1)) {
+          arrayIndexedInput.splice(arrayToStr.indexOf(1), 1, wordSubs[0]);
+          console.log(arrayToStr);
+        } else if (arrayIndexedInput.includes(2)){
+          arrayIndexedInput.splice(arrayToStr.indexOf(2), 1, wordSubs[1]);
+          console.log(arrayToStr);
+        } else if (arrayIndexedInput.includes(3)){
+          arrayIndexedInput.splice(arrayToStr.indexOf(3), 1, wordSubs[2]);
+          console.log(arrayToStr);
+        }
 
       }
     };
