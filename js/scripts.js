@@ -7,6 +7,9 @@ function robotTalk(input){
   //store main array in const
   const arrayIndexedInput = indexInput(input);
   //convert array to str **convert in JQuery, or after robotTalk??
+  console.log(arrayIndexedInput);
+  const replaceUnderTen = replaceStr123(arrayIndexedInput);
+
   const convertToString = arrayIndexedInput.join(", ");
 
   //replace 1,2,3 in array with wordSubs[i];
@@ -20,26 +23,23 @@ function robotTalk(input){
     return arrayFromInput;
   }
 
-  //check convertToString if 1, 2, 3 then replace with str in
+  //check and replace numbers with str <10
   function replaceStr123(arrayIndexedInput) {
-    let result;
-    for(let i = 0; i < arrayIndexedInput.length; i++){
+    let newArray;
+    for(let i = 0; i < 10; i++){
+      //work inside this loop as well, to check >10.
       if (arrayIndexedInput.includes(1)) {
         arrayIndexedInput.splice(arrayIndexedInput.indexOf(1), 1, wordSubs[0]);
-        console.log(arrayIndexedInput);
       } else if (arrayIndexedInput.includes(2)){
         arrayIndexedInput.splice(arrayIndexedInput.indexOf(2), 1, wordSubs[1]);
-        console.log(arrayIndexedInput);
       } else if (arrayIndexedInput.includes(3)){
         arrayIndexedInput.splice(arrayIndexedInput.indexOf(3), 1, wordSubs[2]);
-        console.log(arrayIndexedInput);
       } else {
-        return result;
+        return newArray;
       }
     };
-    return result;
   }
-  replaceStr123(arrayIndexedInput);
+
 
   console.log(arrayIndexedInput);
   console.log(convertToString);
