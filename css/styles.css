@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
+
+body {
+  margin: auto;
+  padding: 0 auto;
+  font-family: 'Source Code Pro';
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  display: grid;
+  grid-template-rows: 3vh 3vh 3vh;
+}
+
+.output {
+  margin: 5vh;
+  width: 40vw;
+}
