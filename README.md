@@ -29,7 +29,6 @@ Code: robotTalk(5);
 Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5] -->
 
 
-Test: "Check 
-Code: robotTalk(14);
+Test: "Determine for multiple digits if there is a 1, 2, or 3"
+Code: 
 Expected Output: "0", "Beep", "Boop", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep!", "Boop", "Won't you be my neighbor?", "Beep!"
-
