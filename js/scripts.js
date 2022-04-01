@@ -23,36 +23,42 @@ function robotTalk(input){
     return arrayFromInput;
   }
 
-  function replaceArr123(arrayIndexedInput) {
+  function checkOverTen(arrayIndexedInput){
+    
+  }
 
+  function replaceArr123(arrayIndexedInput, checkOverTen) {
     for(let i = 0; i < arrayIndexedInput.length; i++){
       //work inside this loop as well, to check >10.
-      if (arrayIndexedInput < 10){
+      if (arrayIndexedInput[i] < 10){
         if (arrayIndexedInput.includes(1)) {
           arrayIndexedInput.splice(arrayIndexedInput.indexOf(1), 1, wordSubs[0]);
         } else if (arrayIndexedInput.includes(2)){
           arrayIndexedInput.splice(arrayIndexedInput.indexOf(2), 1, wordSubs[1]);
         } else if (arrayIndexedInput.includes(3)){
           arrayIndexedInput.splice(arrayIndexedInput.indexOf(3), 1, wordSubs[2]);
-        }
-      } else if (arrayIndexedInput >= 10){
-        const toString = arrayIndexedInput[i].toString();
-        const toArray = toString.split(" ");
-        console.log(toArray);
-
-        for (let j = 0; j < toArray.length; j++){ 
-          if (arrayIndexedInput.includes(1)) {
-            arrayIndexedInput.splice(arrayIndexedInput.indexOf(1), 1, wordSubs[0]);
-          } else if (arrayIndexedInput.includes(2)){
-            arrayIndexedInput.splice(arrayIndexedInput.indexOf(2), 1, wordSubs[1]);;
-          } else if (arrayIndexedInput.includes(3)){
-            arrayIndexedInput.splice(arrayIndexedInput.indexOf(3), 1, wordSubs[2]);
-          }
+        } else {
+          checkOverTen();
         };
+        // } else if (arrayIndexedInput[i] >= 10){
+          
+        // const toString = arrayIndexedInput.toString();
+        // console.log(toString);
+        // console.log(i);
+        //   // for (let j = 0; j < toString.length; j++){ 
+        //     if (toString.includes("1")) {
+        //       arrayIndexedInput.splice(arrayIndexedInput.indexOf("1"), 1, wordSubs[0]);
+        //     } else if (toString.includes("2")){
+        //       arrayIndexedInput.splice(arrayIndexedInput.indexOf("2"), 1, wordSubs[1]);;
+        //     } else if (toString.includes("3")){
+        //       arrayIndexedInput.splice(arrayIndexedInput.indexOf("3"), 1, wordSubs[2]);
+        //     }
+        // };
+        // return arrayIndexedInput;
+        // console.log(arrayIndexedInput);
       };
-      return arrayIndexedInput;
     };
-
+    return arrayIndexedInput;
   }
 
   function arrayToString(arrayIndexedInput){
