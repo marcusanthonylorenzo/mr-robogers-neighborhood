@@ -4,8 +4,7 @@ function robotTalk(input){
   const wordSubs = ["Beep", "Boop", "Won't you be my neighbor?"];
   const arrayIndexedInput = indexInput(input);
   const replaceArray = replaceArr123(arrayIndexedInput);
-  const stringConversion = replaceArray.join(", ");
-  console.log(stringConversion);
+  const stringConversion = replaceArray.join(",");
 
   function indexInput(input){
     let arrayFromInput = [];
@@ -17,6 +16,7 @@ function robotTalk(input){
 
   function replaceArr123(arrayIndexedInput) {
     let pushedArray = [];
+
     for(let i = 0; i < arrayIndexedInput.length; i++){
       if (arrayIndexedInput[i] < 10) {
         if (arrayIndexedInput[i] === 1) {
@@ -37,32 +37,27 @@ function robotTalk(input){
         pushedArray.push(digitArray);
         console.log(pushedArray);
 
-        //loop through subarrays to read each digit
+        //loop through subarrays, sort and reverse
         for (let j = 0; j < pushedArray[i].length; j++) {
           let numOverTen = pushedArray[i];
           let sorted = numOverTen.sort(function (a, b) {
             return a-b
           });
           let reversed = sorted.reverse();
+          console.log(reversed);
 
-          console.log(pushedArray[i]);
-          console.log(pushedArray[i][j]);
           //conditions
           if (reversed.includes('3')){
-            numOverTen.reverse();
-            pushedArray[i].splice(pushedArray[i], i, wordSubs[2]);
+            reversed.splice(pushedArray[i], i, wordSubs[2]);
+          } else if (reversed.includes('2')){
+            reversed.splice(pushedArray[i], i, wordSubs[1]);
+          } else if (reversed.includes('1')){
+            reversed.splice(pushedArray[i], i, wordSubs[0]);
+          } else {
+            reversed.push(i);
             break;
-          } else if (pushedArray[i][j] === '2'){
-            numOverTen.reverse();
-            pushedArray[i].splice(pushedArray[i], i, wordSubs[1]);
-            break;
-          } else if (pushedArray[i][j] === '1'){
-            numOverTen.reverse();
-            pushedArray[i].splice(pushedArray[i], i, wordSubs[0]);
-            break;
-          
-          };
-        };
+          }
+        }
       }
     }
     return pushedArray;

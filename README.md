@@ -42,8 +42,14 @@ Code: robotTalk(5);
 Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5]
 
 Test: Turn multiple digit integers into array
-Code:
+Code: pushedArray.split("");
 Expected Output: [...[1,0], [1,1], [1,2]]
+
+Test: Sort and reverse array to read highest to lowest
+Code:     let numOverTen = pushedArray[i];
+          let sorted = numOverTen.sort();
+          let reversed = sorted.reverse();
+Expected Output: [...[2,0], [2,1], [2,2], [3,2], [4,2]];
 
 
 
