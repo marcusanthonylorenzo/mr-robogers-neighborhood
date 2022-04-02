@@ -46,13 +46,11 @@ Test: "It should replace 1-11 with wordSubs[i] "
 Code: robotTalk(5);
 Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5]
 
-<<<<<<< HEAD
 Test: Turn multiple digit integers into array
-Code: 
+Code:
+Expected Output: [...[1,0], [1,1], [1,2]]
 
 
-=======
->>>>>>> 2a32754ea4d56278aab268593ef7381c2a810958
 
 ## Setup/Installation Requirements
 

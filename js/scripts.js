@@ -2,16 +2,12 @@
 
 function robotTalk(input){
   console.log(input);
-  //starting statements
   const wordSubs = ["Beep", "Boop", "Won't you be my neighbor?"];
-
   const arrayIndexedInput = indexInput(input);
-
   const replaceArray = replaceArr123(arrayIndexedInput);
-    //convert array to str **convert in JQuery, or after robotTalk??
-  const arrToStrConvert = arrayToString(replaceArray);
+  const stringConversion = replaceArray.join(", ");
+  console.log(stringConversion);
 
-  //run iterator to count and index each number in array
   function indexInput(input){
     let arrayFromInput = [];
     for (let i = 0; i <= input; i++){
@@ -22,7 +18,6 @@ function robotTalk(input){
 
   function replaceArr123(arrayIndexedInput) {
     let pushedArray = [];
-    console.log(arrayIndexedInput);
 
     for(let i = 0; i < arrayIndexedInput.length; i++){
       if (arrayIndexedInput[i] < 10) {
@@ -51,30 +46,23 @@ function robotTalk(input){
           console.log(j);
           console.log(pushedArray[i].length);
           // parseInt(digitArray);
-          if (pushedArray[i][j].includes('3')){
-            //splice to replace current position with string.
+          if (pushedArray[i][j] === '3'){
             pushedArray[i].splice(pushedArray[i], i, wordSubs[2]);
             break;
-          } else if (pushedArray[i][j].includes('2')){
-            //splice to replace current position with string.
+          } else if (pushedArray[i][j] === '2'){
             pushedArray[i].splice(pushedArray[i], i, wordSubs[1]);
-            break;}
-          // } else if (pushedArray[i][j].includes('1') && !pushedArray[i][j].includes('2') && !pushedArray[i][j].includes('3')){
-          //   //splice to replace current position with string.
+            break;
+          // } else if (pushedArray[i][j]){
           //   pushedArray[i].splice(pushedArray[i], i, wordSubs[0]);
-          // }
+          }
         };
       }
     }
-    console.log(pushedArray);
     return pushedArray;
   };
-
-  function arrayToString(item){
-    let newArray = item.join(", ");
-    console.log(newArray);
-  };
+  return stringConversion;
 };
+
 
 
 //UI Logic
@@ -88,7 +76,7 @@ $(document).ready(function () {
     const submitBtn = $("#submit");
 
     //submit action
-    let submit = robotTalk(numberInput);
-    display.append("<p>" + submit + "</p>");
+    let strConv = robotTalk(numberInput);
+    display.append("<p>" + strConv + "</p>");
   });
 });
