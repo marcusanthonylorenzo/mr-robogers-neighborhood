@@ -5,9 +5,8 @@ function robotTalk(input){
   //starting statements
   const wordSubs = ["Beep", "Boop", "Won't you be my neighbor?"];
 
-  //store main array in const
   const arrayIndexedInput = indexInput(input);
-  //replaceArray
+
   const replaceArray = replaceArr123(arrayIndexedInput);
     //convert array to str **convert in JQuery, or after robotTalk??
   const arrToStrConvert = arrayToString(replaceArray);
@@ -47,13 +46,24 @@ function robotTalk(input){
         console.log(pushedArray);
 
         //loop through subarrays to read each digit
-        for (let j = 0; j < pushedArray[i][j].length; j++) {
-          if (pushedArray[i][j] === 1){
+        for (let j = 0; j < pushedArray[i].length; j++) {
+          console.log(i);
+          console.log(j);
+          console.log(pushedArray[i].length);
+          // parseInt(digitArray);
+          if (pushedArray[i][j].includes('3')){
             //splice to replace current position with string.
-            pushedArray.splice(pushedArray[i], 1, wordSubs[0]);
-          };
-        }
-        
+            pushedArray[i].splice(pushedArray[i], i, wordSubs[2]);
+            break;
+          } else if (pushedArray[i][j].includes('2')){
+            //splice to replace current position with string.
+            pushedArray[i].splice(pushedArray[i], i, wordSubs[1]);
+            break;}
+          // } else if (pushedArray[i][j].includes('1') && !pushedArray[i][j].includes('2') && !pushedArray[i][j].includes('3')){
+          //   //splice to replace current position with string.
+          //   pushedArray[i].splice(pushedArray[i], i, wordSubs[0]);
+          // }
+        };
       }
     }
     console.log(pushedArray);
@@ -65,6 +75,7 @@ function robotTalk(input){
     console.log(newArray);
   };
 };
+
 
 //UI Logic
 $(document).ready(function () {
