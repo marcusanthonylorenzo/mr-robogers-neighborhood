@@ -26,17 +26,35 @@ function robotTalk(input){
     console.log(arrayIndexedInput);
 
     for(let i = 0; i < arrayIndexedInput.length; i++){
-      if (arrayIndexedInput[i] === 1) {
-        console.log(i);
-        pushedArray.push(wordSubs[0]);
-      } else if (arrayIndexedInput[i] === 2) {
-        pushedArray.push(wordSubs[1]);
-      } else if (arrayIndexedInput[i] === 3) {
-        pushedArray.push(wordSubs[2]);
+      if (arrayIndexedInput[i] < 10) {
+        if (arrayIndexedInput[i] === 1) {
+          console.log(i);
+          console.log(arrayIndexedInput[i]);
+          pushedArray.push(wordSubs[0]);
+        } else if (arrayIndexedInput[i] === 2) {
+          pushedArray.push(wordSubs[1]);
+        } else if (arrayIndexedInput[i] === 3) {
+          pushedArray.push(wordSubs[2]);
+        } else {
+          pushedArray.push(i);
+        }
       } else {
-        pushedArray.push(i);
+        //create subarray via str conversion
+        let strNum = arrayIndexedInput[i].toString();
+        let digitArray = strNum.split("");
+        console.log(digitArray);
+        pushedArray.push(digitArray);
+        console.log(pushedArray);
+
+        //loop through subarrays to read each digit
+        for (let j = 0; j < pushedArray[i][j].length; j++) {
+          if (pushedArray[i][j] === 1){
+            //splice to replace current position with string.
+            pushedArray.splice(pushedArray[i], 1, wordSubs[0]);
+          };
+        }
+        
       }
-      console.log(pushedArray);
     }
     console.log(pushedArray);
     return pushedArray;
@@ -44,7 +62,7 @@ function robotTalk(input){
 
   function arrayToString(item){
     let newArray = item.join(", ");
-    return newArray;
+    console.log(newArray);
   };
 };
 
