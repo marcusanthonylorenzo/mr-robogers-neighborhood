@@ -22,38 +22,28 @@ function robotTalk(input){
   }
 
   function replaceArr123(arrayIndexedInput) {
-    const pushedArray = [];
-    const convertedArray = arrayIndexedInput.join(" ");
+    let pushedArray = [];
+    console.log(arrayIndexedInput);
 
     for(let i = 0; i < arrayIndexedInput.length; i++){
-      if (arrayIndexedInput[i] < 10){
+      if (arrayIndexedInput[i] === 1) {
         console.log(i);
-        console.log(arrayIndexedInput);
-        console.log(arrayIndexedInput[i]);
-        if (arrayIndexedInput.includes(1)) {
-          arrayIndexedInput.splice(arrayIndexedInput.indexOf(1), 1, wordSubs[0]);
-        } else if (arrayIndexedInput.includes(2)){
-          arrayIndexedInput.splice(arrayIndexedInput.indexOf(2), 1, wordSubs[1]);
-        } else if (arrayIndexedInput.includes(3)){
-          arrayIndexedInput.splice(arrayIndexedInput.indexOf(3), 1, wordSubs[2]);
-        } 
-      } else if (arrayIndexedInput[i] >= 10) {
-        if (arrayToStr.includes(1)) {
-          copiedArray.splice(arrayToStr.indexOf(1), 1, wordSubs[0]);
-          console.log(arrayToStr);
-        } else if (arrayIndexedInput.includes(2)){
-          copiedArray.splice(arrayToStr.indexOf(2), 1, wordSubs[1]);
-          console.log(arrayToStr);
-        } else if (arrayIndexedInput.includes(3)){
-          copiedArray.splice(arrayToStr.indexOf(3), 1, wordSubs[2]);
-          console.log(arrayToStr);
-        }
+        pushedArray.push(wordSubs[0]);
+      } else if (arrayIndexedInput[i] === 2) {
+        pushedArray.push(wordSubs[1]);
+      } else if (arrayIndexedInput[i] === 3) {
+        pushedArray.push(wordSubs[2]);
+      } else {
+        pushedArray.push(i);
       }
-    };
+      console.log(pushedArray);
+    }
+    console.log(pushedArray);
     return pushedArray;
-  }
-  function arrayToString(element){
-    let newArray = element.join(", ");
+  };
+
+  function arrayToString(item){
+    let newArray = item.join(", ");
     return newArray;
   };
 };
