@@ -15,7 +15,7 @@
 
 ## Description
 
-_A practice using for loops and conditional statements to target specific numbers (1, 2, and 3) in multiple integers, to convert them to corresponding string values._
+_This has been a crash course in array methods, particularly: **.push**, **.split**, **.splice** (beyond curriculum), and **.join**. It has given me a greater appreciation for organization and TDD as without it, you can make very messy code. A practice using for loops and conditional statements to target specific numbers (1, 2, and 3) in multiple integers, to convert them to corresponding string values._
 
 ## Tests
 
@@ -24,7 +24,7 @@ Describe: robotTalk(input)
 Test: "It should take user input, run for loop and count each individual number up to specified number"
 Code: robotTalk(5);
 Expected Output: (console:) 0, 1, 2, 3, 4, 5 
-
+Mond
 Test: "It should return an array of numbers from 0 to the user's inputted number"
 Code: robotTalk(5);
 Expected Output: [0, 1, 2, 3, 4, 5]
@@ -60,7 +60,7 @@ Expected Output: [...[2,0], [2,1], [2,2], [3,2], [4,2]];
  **cd ~/desktop**
 * This will bring you to your desktop location on the command line, to receive files.
 * Next, type: **git clone https://github.com/marcusanthonylorenzo/mr-robogers-neighborhood**
-* Once completed, type **cd programming-language-suggester**
+* Once completed, go to your desktop and find the folder with same name.
 * Open index.html in your browser.
 * Once your text editor is open, access "index.html" via live server or manually with your browser.
 
