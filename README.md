@@ -21,11 +21,6 @@ _A practice using for loops and conditional statements to target specific number
 
 Describe: robotTalk(input)
 
-*Store inputs AND output 
-[ "Beep" instead of 1,
-  "Boop" instead of 2,
-  "Won't you be my neighbor?" instead of 3]; -->
-
 Test: "It should take user input, run for loop and count each individual number up to specified number"
 Code: robotTalk(5);
 Expected Output: (console:) 0, 1, 2, 3, 4, 5 

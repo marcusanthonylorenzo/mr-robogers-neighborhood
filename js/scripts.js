@@ -1,5 +1,4 @@
 //Business Logic
-
 function robotTalk(input){
   console.log(input);
   const wordSubs = ["Beep", "Boop", "Won't you be my neighbor?"];
@@ -18,7 +17,6 @@ function robotTalk(input){
 
   function replaceArr123(arrayIndexedInput) {
     let pushedArray = [];
-
     for(let i = 0; i < arrayIndexedInput.length; i++){
       if (arrayIndexedInput[i] < 10) {
         if (arrayIndexedInput[i] === 1) {
@@ -31,30 +29,39 @@ function robotTalk(input){
           pushedArray.push(wordSubs[2]);
         } else {
           pushedArray.push(i);
-        }
+        };
       } else {
         //create subarray via str conversion
         let strNum = arrayIndexedInput[i].toString();
         let digitArray = strNum.split("");
-        console.log(digitArray);
         pushedArray.push(digitArray);
         console.log(pushedArray);
 
         //loop through subarrays to read each digit
         for (let j = 0; j < pushedArray[i].length; j++) {
-          console.log(i);
-          console.log(j);
-          console.log(pushedArray[i].length);
-          // parseInt(digitArray);
-          if (pushedArray[i][j] === '3'){
+          let numOverTen = pushedArray[i];
+          let sorted = numOverTen.sort(function (a, b) {
+            return a-b
+          });
+          let reversed = sorted.reverse();
+
+          console.log(pushedArray[i]);
+          console.log(pushedArray[i][j]);
+          //conditions
+          if (reversed.includes('3')){
+            numOverTen.reverse();
             pushedArray[i].splice(pushedArray[i], i, wordSubs[2]);
             break;
           } else if (pushedArray[i][j] === '2'){
+            numOverTen.reverse();
             pushedArray[i].splice(pushedArray[i], i, wordSubs[1]);
             break;
-          // } else if (pushedArray[i][j]){
-          //   pushedArray[i].splice(pushedArray[i], i, wordSubs[0]);
-          }
+          } else if (pushedArray[i][j] === '1'){
+            numOverTen.reverse();
+            pushedArray[i].splice(pushedArray[i], i, wordSubs[0]);
+            break;
+          
+          };
         };
       }
     }
@@ -62,8 +69,6 @@ function robotTalk(input){
   };
   return stringConversion;
 };
-
-
 
 //UI Logic
 $(document).ready(function () {
