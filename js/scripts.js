@@ -4,7 +4,7 @@ function robotTalk(input){
   const wordSubs = ["Beep", "Boop", "Won't you be my neighbor?"];
   const arrayIndexedInput = indexInput(input);
   const replaceArray = replaceArr123(arrayIndexedInput);
-  const stringConversion = replaceArray.join(",");
+  const stringConversion = replaceArray.join(" ");
 
   function indexInput(input){
     let arrayFromInput = [];
@@ -39,7 +39,7 @@ function robotTalk(input){
             return a-b
           });
           let reversed = sorted.reverse();
-          //conditions
+          //conditions from highest to lowest precedence
           if (reversed.includes('3')){
             reversed.splice(pushedArray[i], i, wordSubs[2]);
           } else if (reversed.includes('2')){

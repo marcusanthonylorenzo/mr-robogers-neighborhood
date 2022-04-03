@@ -15,7 +15,9 @@
 
 ## Description
 
-_This has been a crash course in array methods, particularly: **.push**, **.split**, **.splice** (beyond curriculum), and **.join**. It has given me a greater appreciation for organization and TDD as without it, you can make very messy code. A practice using for loops and conditional statements to target specific numbers (1, 2, and 3) in multiple integers, to convert them to corresponding string values._
+_This has been a long, difficult, trial-and-error crash course in array methods, particularly: **.push**, **.split**, **.splice** (beyond curriculum), and **.join**. It has given me a greater appreciation for organization and TDD - as without it, you can make very messy code. This is a practice using For loops and conditional statements to target specific numbers (1, 2, and 3) in multiple integers.
+
+**My ultimate objective was** to sort each number into subarrays, then read each index, convert them to corresponding string values, and replace them by mutating the array. I understand that it may be safer to slice instead of splice, but I wanted to attempt to manipulate the array directly...and achieved that result._
 
 ## Tests
 
@@ -83,7 +85,7 @@ Expected Output: [...[40], "Beep", "Boop", Why won't you be my neighbor?", [44],
  **cd ~/desktop**
 * This will bring you to your desktop location on the command line, to receive files.
 * Next, type: **git clone https://github.com/marcusanthonylorenzo/mr-robogers-neighborhood**
-* Once completed, go to your desktop and find the folder with same name.
+* Once completed, go to your desktop and find the folder with same name as the repository.
 * Open index.html in your browser.
 * Once your text editor is open, access "index.html" via live server or manually with your browser.
 
@@ -94,6 +96,6 @@ Expected Output: [...[40], "Beep", "Boop", Why won't you be my neighbor?", [44],
 
 ## License
 
-[MIT](https://github.com/marcusanthonylorenzo/programming-language-suggester/blob/add-license-1/LICENSE)
+[MIT](https://github.com/marcusanthonylorenzo/mr-robogers-neighborhood/blob/add-license-1/LICENSE)
 
 Copyright (c) 2022 _Marcus Padilla_

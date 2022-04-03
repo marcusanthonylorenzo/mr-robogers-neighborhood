@@ -1,26 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 
 body {
-  margin: auto;
   padding: 0 auto;
   font-family: 'Source Code Pro';
 }
 
-.container {
+.form-wrappper {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 5rem;
   height: 70vh;
   justify-content: center;
   align-items: center;
 }
 
-#form {
+#form{
   display: grid;
-  grid-template-rows: 3vh 3vh 3vh;
+  justify-content: left;
+  grid-template-rows: 3vh;
+  width: 100%;
+  margin: 5%;
+}
+
+#submit {
+  width: 50%;
 }
 
 .output {
+  display: flex;
+  position: relative;
   margin: 5vh;
-  width: 40vw;
+  width: 80%;
+  height: 90%;
+  overflow: auto;
 }
