@@ -94,6 +94,6 @@ Expected Output: [...[40], "Beep", "Boop", Why won't you be my neighbor?", [44],
 
 ## License
 
-[MIT](https://github.com/marcusanthonylorenzo/programming-language-suggester/blob/add-license-1/LICENSE)
+[MIT](https://github.com/marcusanthonylorenzo/mr-robogers-neighborhood/blob/add-license-1/LICENSE)
 
 Copyright (c) 2022 _Marcus Padilla_
