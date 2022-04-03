@@ -51,6 +51,29 @@ Code:     let numOverTen = pushedArray[i];
           let reversed = sorted.reverse();
 Expected Output: [...[2,0], [2,1], [2,2], [3,2], [4,2]];
 
+Test: It should replace the reversed subarrays with strings from wordSubs[item]
+Code:     for(let i = 0; i < arrayIndexedInput.length; i++){
+      if (arrayIndexedInput[i] < 10) {
+        if (arrayIndexedInput[i] === 1) {
+          console.log(i);
+          console.log(arrayIndexedInput[i]);
+          pushedArray.push(wordSubs[0]);
+        } else if (arrayIndexedInput[i] === 2) {
+          pushedArray.push(wordSubs[1]);
+        } else if (arrayIndexedInput[i] === 3) {
+          pushedArray.push(wordSubs[2]);
+        } else {
+          pushedArray.push(i);
+        };
+Expected Output: [...[4,0], "Beep", "Boop", Why won't you be my neighbor?", [4,4], [4,5]...]
+
+Test: It should eliminate duplicates in subarrays (derived from above test "It should replace the reversed subarrays...")
+Code:           } else {
+            reversed.push(i);
+            numOverTen.splice(0,2);
+            break;
+          }
+Expected Output: [...[40], "Beep", "Boop", Why won't you be my neighbor?", [44], [45]...]
 
 
 ## Setup/Installation Requirements

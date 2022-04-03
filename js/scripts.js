@@ -55,6 +55,9 @@ function robotTalk(input){
             reversed.splice(pushedArray[i], i, wordSubs[0]);
           } else {
             reversed.push(i);
+            console.log(pushedArray[i][j]);
+            numOverTen.splice(0,2);
+            console.log(pushedArray[i]);
             break;
           }
         }
