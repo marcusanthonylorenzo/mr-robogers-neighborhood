@@ -87,7 +87,6 @@ Expected Output: [...[40], "Beep", "Boop", Why won't you be my neighbor?", [44],
 * Next, type: **git clone https://github.com/marcusanthonylorenzo/mr-robogers-neighborhood**
 * Once completed, go to your desktop and find the folder with same name as the repository.
 * Open index.html in your browser.
-* Once your text editor is open, access "index.html" via live server or manually with your browser.
 
 
 ## Known Bugs
